@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        width: 100vw;
+        height: 100vh;
+        background-color: darkorchid;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+    }
+
+    .box h1 {
+        color: whitesmoke;
+    }
+</style>
+
+<body>
+
+    <div class="box" id="box">
+        <h1 id="h1">click the yellow box</h1>
+    </div>
+
+    <script>
+        const box = document.getElementById('box');
+        const h1 = document.getElementById('h1');
+
+        box.onclick = (event) => {
+            h1.textContent = `box coordinate x: ${event.x}, y: ${event.y}`;
+        }
+    </script>
+
+</body>
+
+</html>
