@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul>
+        <li value="white">1</li>
+        <li value="#ddd">2</li>
+        <li value="purple">3</li>
+    </ul>
+
+    <script>
+
+        const lists = document.querySelectorAll('li');
+        const body = document.querySelector('body');
+
+        for (const li of lists) {
+            li.onclick = (v) => {
+                body.style.backgroundColor = li.getAttribute('value');
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
